@@ -1,7 +1,9 @@
+require('./styles.styl');
+
 import React, { Component } from 'react';
 import Layout from './Layout';
-import Counter from './Counter';
-import Grid from './Grid';
+
+import Inventory from './Inventory';
 
 // If you use React Router, make this component
 // render <Router> with your routes. Currently,
@@ -14,8 +16,7 @@ export default class App extends Component {
   render() {
     return (
       <Layout>
-        <Grid />
-        <Counter />
+        <Inventory />
       </Layout>
     );
   }
