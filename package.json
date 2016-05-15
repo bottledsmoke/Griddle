@@ -4,6 +4,7 @@
   "description": "Boilerplate for ReactJS project with hot code reloading",
   "scripts": {
     "start": "node server.js",
+    "db": "rethinkdb",
     "lint": "eslint src"
   },
   "repository": {
@@ -51,6 +52,7 @@
     "immutable": "^3.8.1",
     "normalize.css": "^4.1.1",
     "react": "^15.0.1",
-    "react-dom": "^15.0.1"
+    "react-dom": "^15.0.1",
+    "rethinkdb": "^2.3.1"
   }
 }
