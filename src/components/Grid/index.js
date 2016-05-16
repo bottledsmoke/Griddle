@@ -1,9 +1,7 @@
 import React, { Component, PropTypes } from 'react';
+import parseKey from 'parse-key';
 import GridLines from './Grid';
 import Controls from './Controls';
-
-import parseKey from 'parse-key';
-
 import './Grid.styl';
 
 export default class Grid extends Component {
@@ -47,9 +45,7 @@ export default class Grid extends Component {
   }
 
   matchesKey(key, event) {
-    if (!key) {
-      return false;
-    }
+    if (!key) { return false; }
 
     const charCode = event.keyCode || event.which;
     const char = String.fromCharCode(charCode);
@@ -61,11 +57,17 @@ export default class Grid extends Component {
   }
 
   toggleGrid() {
-    this.setState({ ...this.state, gridActive: !this.state.gridActive });
+    this.setState({
+      ...this.state,
+      gridActive: !this.state.gridActive
+    });
   }
 
   hideControls() {
-    this.setState({ ...this.state, controlsVisible: !this.state.controlsVisible });
+    this.setState({
+      ...this.state,
+      controlsVisible: !this.state.controlsVisible
+    });
   }
 
   render() {
@@ -92,42 +94,42 @@ export default class Grid extends Component {
       </div>
     );
   }
-
-  // componentDidMount() {
-  //   const max_width = 1280;
-  //   const min_width = 320;
-  //   this.scale = this.makeTypographicScale(max_width, min_width);
-  // }
-
-  // makeTypographicScale(start, end) {
-  //   var current = start;
-  //   var result = {};
-  //   const divisors = [23, 35, 47,	59,	71,	83,	95];
-  //   result.fullList = [];
-  //
-  //   divisors.map((value) => {
-  //     result[value] = [];
-  //   })
-  //
-  //   while (current >= end) {
-  //
-  //     divisors.map((divisor) => {
-  //       const gutter_width = current / divisor
-  //       if (Number.isInteger(gutter_width)) {
-  //         result[divisor].push({pageWidth: current, gutterWidth: gutter_width});
-  //         result.fullList.push(current + ', div: ' + divisor + ', gutter: ' + gutter_width);
-  //       }
-  //     });
-  //
-  //     current--;
-  //   }
-  //
-  //   console.log(result);
-  //   return result;
-  // }
 }
 
 Grid.propTypes = {
   width: PropTypes.number,
   lead: PropTypes.number
 };
+
+// componentDidMount() {
+//   const max_width = 1280;
+//   const min_width = 320;
+//   this.scale = this.makeTypographicScale(max_width, min_width);
+// }
+
+// makeTypographicScale(start, end) {
+//   var current = start;
+//   var result = {};
+//   const divisors = [23, 35, 47,	59,	71,	83,	95];
+//   result.fullList = [];
+//
+//   divisors.map((value) => {
+//     result[value] = [];
+//   })
+//
+//   while (current >= end) {
+//
+//     divisors.map((divisor) => {
+//       const gutter_width = current / divisor
+//       if (Number.isInteger(gutter_width)) {
+//         result[divisor].push({pageWidth: current, gutterWidth: gutter_width});
+//         result.fullList.push(current + ', div: ' + divisor + ', gutter: ' + gutter_width);
+//       }
+//     });
+//
+//     current--;
+//   }
+//
+//   console.log(result);
+//   return result;
+// }
