@@ -1,39 +1,41 @@
 import React, { Component } from 'react';
 
-export default class Grid extends Component {
+export default class Grid extends Component {  
   render() {
     const width = 980;
     const lead = 35;
     const documentHeight = document.documentElement.offsetHeight;
-    const horiz_scale = Math.ceil(documentHeight / (width / lead));
+    const horizScale = Math.ceil(documentHeight / (width / lead));
 
-    const vert_divs = [...Array(lead)].map((div, i) => {
-      return <div
-        key={'v_div' + i + Math.random(100)}
+    const vertDivs = [...Array(lead)].map((div, i) =>
+      <div
+        key={`v_div-${i + Math.random(100)}`}
         style={{
           height: '100%',
-          width: width / lead + 'px',
+          width: `${width / lead}px`,
           border: '1px solid #ccc',
           position: 'absolute',
           top: 0,
-          left: (width / lead) * i + 'px'
+          left: `${(width / lead) * i}px`
         }}
-      ></div>
-    });
+      >
+      </div>
+    );
 
-    const horiz_divs = [...Array(horiz_scale)].map((div, i) => {
-      return <div
-        key={'h_div' + i + Math.random(100)}
+    const horizDivs = [...Array(horizScale)].map((div, i) =>
+      <div
+        key={`h_div-${i + Math.random(100)}`}
         style={{
-          height: width / lead + 'px',
-          width: width,
+          height: `${width / lead}px`,
+          width,
           border: '1px solid #ccc',
           position: 'absolute',
-          top: (width / lead) * i + 'px',
+          top: `${(width / lead) * i}px`,
           left: 0,
         }}
-      ></div>
-    });
+      >
+      </div>
+    );
 
     return (
       <div
@@ -44,8 +46,8 @@ export default class Grid extends Component {
           zIndex: -999
         }}
       >
-        {vert_divs}
-        {horiz_divs}
+        {vertDivs}
+        {horizDivs}
       </div>
     );
   }
