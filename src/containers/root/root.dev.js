@@ -3,12 +3,7 @@ import { Provider } from 'react-redux';
 import { Router } from 'react-router';
 
 import DevTools from '../DevTools';
-
-// Root.propTypes = {
-//   store: PropTypes.object.isRequired,
-//   routing: PropTypes.object.isRequired,
-//   history: PropTypes.object.isRequired
-// };
+import Grid from '../../components/Grid';
 
 export default class Root extends Component {
   render() {
@@ -20,9 +15,16 @@ export default class Root extends Component {
           <Router history={history}>
             {routing}
           </Router>
+          <Grid />
           <DevTools />
         </div>
       </Provider>
     );
   }
 }
+
+Root.propTypes = {
+  store: PropTypes.object.isRequired,
+  routing: PropTypes.object.isRequired,
+  history: PropTypes.object.isRequired
+};
