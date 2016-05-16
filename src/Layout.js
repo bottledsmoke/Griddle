@@ -1,5 +1,9 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import Grid from './Grid';
+
+Layout.propTypes = {
+  children: PropTypes.object.isRequired
+};
 
 export default function Layout({ children }) {
   return (
@@ -7,5 +11,5 @@ export default function Layout({ children }) {
       <Grid />
       {children}
     </div>
-  )
+  );
 }

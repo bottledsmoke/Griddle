@@ -1,12 +1,8 @@
 import r from 'rethinkdb';
-
-const config = {
-  host: 'localhost',
-  port: 28015
-}
+import config from 'config';
 
 function connect() {
-  return r.connect(config);
+  return r.connect(config.get('rethinkdb'));
 }
 
 export default connect;
