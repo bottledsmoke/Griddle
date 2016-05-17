@@ -1,7 +1,7 @@
 {
-  "name": "react-hot-boilerplate",
+  "name": "griddle",
   "version": "1.0.0",
-  "description": "Boilerplate for ReactJS project with hot code reloading",
+  "description": "App based off of 3REE and React-Hot-Boilerplate 3.0",
   "scripts": {
     "start:dev": "NODE_ENV=development node server.js",
     "db": "rethinkdb",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gaearon/react-hot-boilerplate.git"
+    "url": "https://github.com/bottledsmoke/griddle.git"
   },
   "keywords": [
     "react",
@@ -22,12 +22,12 @@
     "edit",
     "webpack"
   ],
-  "author": "Dan Abramov <dan.abramov@me.com> (http://github.com/gaearon)",
+  "author": "Tyler Hellner (http://github.com/griddle)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/gaearon/react-hot-boilerplate/issues"
+    "url": "https://github.com/bottledsmoke/griddle/issues"
   },
-  "homepage": "https://github.com/gaearon/react-hot-boilerplate",
+  "homepage": "https://github.com/bottledsmoke/griddle",
   "devDependencies": {
     "autoprefixer": "^6.3.6",
     "babel-core": "^6.0.20",
