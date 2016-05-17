@@ -36,11 +36,17 @@ export default class Grid extends Component {
       return;
     }
 
-    const visibilityKey = parseKey('ctrl-g');
+    const visibilityKey = parseKey('ctrl-alt-g');
+    const toggleGridKey = parseKey('ctrl-g');
 
     if (this.matchesKey(visibilityKey, e)) {
       e.preventDefault();
       this.hideControls();
+    }
+
+    if (this.matchesKey(toggleGridKey, e)) {
+      e.preventDefault();
+      this.toggleGrid();
     }
   }
 

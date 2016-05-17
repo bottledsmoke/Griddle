@@ -6,7 +6,7 @@ export default class Grid extends Component {
     let verticalDivs;
     let horizontalDivs;
 
-    if (this.props.active) {
+    if (active) {
       const documentHeight = document.documentElement.offsetHeight;
       const horizScale = Math.ceil(documentHeight / (width / lead));
 
@@ -43,10 +43,10 @@ export default class Grid extends Component {
 
     return (
       <div>
-        <div id='VerticalLines'>
+        <div id="VerticalLines">
           {verticalDivs}
         </div>
-        <div id='HorizontalLines'>
+        <div id="HorizontalLines">
           {horizontalDivs}
         </div>
       </div>
